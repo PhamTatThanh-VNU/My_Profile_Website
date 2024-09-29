@@ -249,3 +249,9 @@ function getCurrentAge() {
   const age = currentYear - birthYear;
   document.getElementById("age").textContent = age;
 }
+window.addEventListener("scroll", function () {
+  var audio = document.getElementById("background-music");
+  if (audio.muted) {
+    audio.muted = false;
+  }
+});
