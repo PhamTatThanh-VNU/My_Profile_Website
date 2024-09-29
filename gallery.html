@@ -367,10 +367,8 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                                data-aos-delay="200">
+                            <form id="contact-form" class="php-email-form" method="POST" onsubmit="return false;">
                                 <div class="row gy-4">
-
                                     <div class="col-md-6">
                                         <label for="name-field" class="pb-2">Your Name</label>
                                         <input type="text" name="name" id="name-field" class="form-control" required="">
@@ -393,19 +391,18 @@
                                         <textarea class="form-control" name="message" rows="10" id="message-field"
                                             required=""></textarea>
                                     </div>
-
+                                    <div id="success-alert" class="alert alert-success mt-3" style="display: none;">
+                                        Thành đã nhận được tin nhắn của bạn ^_^!
+                                    </div>
+                                    <div id="error-alert" class="alert alert-danger mt-3" style="display: none;">
+                                        Tin nhắn bị lỗi, không gửi được. Hãy thử lại sau.
+                                    </div>
                                     <div class="col-md-12 text-center">
-                                        <div class="loading">Loading</div>
-                                        <div class="error-message"></div>
-                                        <div class="sent-message">Your message has been sent. Thank you!</div>
-
                                         <button type="submit">Send Message</button>
                                     </div>
-
                                 </div>
                             </form>
-                        </div><!-- End Contact Form -->
-
+                        </div>
                     </div>
 
                 </div>
@@ -433,9 +430,10 @@
     <!-- Preloader -->
     <div id="preloader"></div>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/emailjs-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/typed.js/typed.umd.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
