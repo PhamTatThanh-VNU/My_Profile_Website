@@ -860,7 +860,7 @@ section,
   color: rgba(255, 255, 255, 0.8);
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link{
+.preview-mainpage{
 position: absolute;
   top: 50%;
   left: 50%;
@@ -868,6 +868,7 @@ position: absolute;
   font-size: 24px;
   color: white;
 }
+.portfolio .portfolio-content .portfolio-info .preview-link,
 .portfolio .portfolio-content .portfolio-info .details-link {
   position: absolute;
   left: calc(50% - 40px);
