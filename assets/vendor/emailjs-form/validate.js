@@ -10,11 +10,12 @@ window.onload = function () {
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-      document.getElementById("contact-form").reset();
       emailjs.sendForm("service_79yk9qn", "template_pwdvzdi", this).then(
         function (response) {
           const successAlert = document.getElementById("success-alert");
           successAlert.style.display = "block"; // Show the alert
+
+          document.getElementById("contact-form").reset();
 
           setTimeout(() => {
             successAlert.style.display = "none"; // Hide after 5 seconds
