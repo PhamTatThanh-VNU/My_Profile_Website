@@ -242,14 +242,6 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 })();
-
-window.onload = function getCurrentAge() {
-  const currentYear = new Date().getFullYear();
-  const birthYear = 2004;
-  const age = currentYear - birthYear;
-  document.getElementById("age").textContent = age;
-  console.log(age);
-};
 window.addEventListener("scroll", function () {
   var audio = document.getElementById("background-music");
   if (audio.muted) {
